@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace TrySharpSnmp
@@ -24,6 +25,7 @@ namespace TrySharpSnmp
             {
                 List<string> snmpOidList = makeSensorOidList(sensorIndex);
                 this.Get(sensorIndex, snmpOidList);
+                Thread.Sleep(500);
             }
         }
 
