@@ -23,7 +23,8 @@ namespace TrySharpSnmp
             worker.CommunityName = "public";
             worker.TimeoutMsec = 60000;
 
-            worker.Get(".1.3.6.1.2.1.1.1.0");
+            worker.GetSensors();
+            //worker.Get(".1.3.6.1.2.1.1.1.0");
         }
     }
 }
